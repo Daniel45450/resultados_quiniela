@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultador de jugadas</title>
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="../static/js/app.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="formulario">
+            <h1 class="formulario__titulo">Consultar Jugada</h1>
+            <p class="formulario__descripcion">Introduce el numero para comprobar si tiene premio</p>
+            <form class="formulario__cuerpo">
+                <input class="formulario__cuerpo--input" type="text" id="numero" name="numero" pattern="\d{4}" title="Ingrese un número de 4 dígitos" required>
+                <div class="formulario__cuerpo--opciones">
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="r1" value="1">
+                        <label for="r1">A la cabeza</label>
+                    </div>
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="r10" value="2">
+                        <label for="r10">A los 10</label>
+                    </div>
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="r20" value="3">
+                        <label for="r20">A los 20</label>
+                    </div>
+                </div>
+                <input class="btn btn--submit" type="submit" value="Comprobar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+}
+
+.formulario {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.formulario__titulo {
+    font-size: 6rem;
+}
+
+.formulario__descripcion {
+    font-size: 2.5rem;
+}
+
+.formulario__cuerpo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario__cuerpo--input {
+    margin: 1rem;
+    width: 40rem;
+    height: 3rem;
+}
+
+.formulario__cuerpo--opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario__cuerpo--opcion {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario__cuerpo--opcion input {
+    margin-right: 0.5rem;
+    width: 1.5rem; /* Ajusta el ancho del checkbox según tus preferencias */
+}
+
+.formulario__cuerpo--opcion label {
+    width: 10rem; /* Ajusta el ancho de la etiqueta según tus preferencias */
+    text-align: justify;
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    width: 30rem;
+}
+
+.btn--submit {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .formulario__titulo {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .formulario__titulo {
+        font-size: 4rem;
+    }
+}
