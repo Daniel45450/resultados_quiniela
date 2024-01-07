@@ -13,19 +13,19 @@
         <div class="formulario">
             <h1 class="formulario__titulo">Consultar Jugada</h1>
             <p class="formulario__descripcion">Introduce el numero para comprobar si tiene premio</p>
-            <form class="formulario__cuerpo">
+            <form class="formulario__cuerpo" method="post" action="{{ url_for('revisar_jugada')   }}">
                 <input class="formulario__cuerpo--input" type="text" id="numero" name="numero" pattern="\d{4}" title="Ingrese un número de 4 dígitos" required>
                 <div class="formulario__cuerpo--opciones">
                     <div class="formulario__cuerpo--opcion">
-                        <input type="checkbox" id="r1" value="1">
+                        <input type="checkbox" id="r1" name="opcion" value="1">
                         <label for="r1">A la cabeza</label>
                     </div>
                     <div class="formulario__cuerpo--opcion">
-                        <input type="checkbox" id="r10" value="2">
+                        <input type="checkbox" id="r10" name="opcion" value="2">
                         <label for="r10">A los 10</label>
                     </div>
                     <div class="formulario__cuerpo--opcion">
-                        <input type="checkbox" id="r20" value="3">
+                        <input type="checkbox" id="r20" name="opcion" value="3">
                         <label for="r20">A los 20</label>
                     </div>
                 </div>
