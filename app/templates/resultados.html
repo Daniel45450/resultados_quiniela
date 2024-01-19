@@ -1,0 +1,31 @@
+
+{# {{ quinielas }}
+{{ opciones }} #}
+{% if quinielas %}
+    {% set cifras = get_cadenas(numero_jugado) %}
+    {{cifras}}
+    {% for nombre_quiniela, resultados in quinielas.items() %}
+        <h2> {{ nombre_quiniela }}</h2>
+        {% for resultado in resultados %}
+            {% for horario, numeros in resultado.items() %}
+                <h2>{{horario}}</h2>
+                {% set num_cifras = ['1','2','3'] %}
+                {% set oracion = ['dos', 'tres', 'cuatro' ]}
+                {% if '1' in opciones and numero_jugado|length >= 2 %} {# comprueba premios a 2 cifras #}
+                    <h2>Dos cifras</h2>
+                    {% set premios = verificar_premios(cifras[1], numeros) %}
+                    {{premios}}
+                    {% if premios %}
+                        {% for premio in premios %}
+                            {% for posicion, numero in premio.items() %}
+                                <h2>{{posicion}}:{{numero}}</h2>
+                            {% endfor %}
+                        {% endfor %}
+                    {% else %}
+                        <h2>No tiene premio</h2>    
+                    {% endif %}
+                {% endif %}  {# finaliza 2 cifras #}
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}

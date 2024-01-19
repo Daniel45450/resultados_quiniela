@@ -1,0 +1,32 @@
+        <div class="formulario">
+            <h1 class="formulario__titulo">Consultar Jugada</h1>
+            <p class="formulario__descripcion">Introduce el numero para comprobar si tiene premio</p>
+            <form class="formulario__cuerpo" method="post" action="{{ url_for('revisar_jugada')   }}">
+                <input class="formulario__cuerpo--input" type="text" id="numero" name="numero" min="0" max="9999" title="Ingrese un número de 4 dígitos" required>
+                <div class="formulario__cuerpo--opciones">
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="c2" name="opcion" value="1" checked>
+                        <label for="c2">Dos cifras</label>
+                    </div>
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="c3" name="opcion" value="2" checked>
+                        <label for="c3">Tres cifras</label>
+                    </div>
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="prov" name="opcion" value="provincia" checked>
+                        <label for="prov">Provincia</label>
+                    </div>
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="nac" name="opcion" value="nacion" checked>
+                        <label for="nac">Nacion</label>
+                    </div>
+                    <div class="formulario__cuerpo--opcion">
+                        <input type="checkbox" id="cord" name="opcion" value="cordoba" checked>
+                        <label for="cord">Cordoba</label>
+                    </div>
+                </div>
+                <input class="btn btn--submit" type="submit" value="Comprobar">
+            </form>
+        </div>
+
+    

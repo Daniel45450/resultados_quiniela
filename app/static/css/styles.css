@@ -96,3 +96,13 @@ body {
         font-size: 4rem;
     }
 }
+
+.aviso {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.aviso span {
+    font-weight: bold;
+}
+
