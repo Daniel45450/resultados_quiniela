@@ -58,7 +58,7 @@ body {
 }
 
 .formulario__cuerpo--opcion label {
-    width: 10rem; /* Ajusta el ancho de la etiqueta según tus preferencias */
+    width: 15rem; /* Ajusta el ancho de la etiqueta según tus preferencias */
     text-align: justify;
 }
 
@@ -106,3 +106,44 @@ body {
     font-weight: bold;
 }
 
+
+.quinielas {
+    text-align: center;
+}
+
+.quiniela {
+    background-color: #D9D9D9;
+    border: 1px solid #cabfbf;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.quiniela_titulo {
+    background-color: #b3724d;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+.horario {
+    text-transform: capitalize;
+    background-color: #A6978A;
+    padding: 0.3rem;
+    margin-top: 2rem;
+}
+
+.resultados {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultado {
+    display: block;
+    width: 10rem;
+}
+
+.premios {
+    display: flex;
+    flex-direction: column;
+    background-color: #96e098;
+}

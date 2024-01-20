@@ -18,6 +18,7 @@ def revisar_jugada():
     numero = request.form.get('numero')
     opciones = request.form.getlist('opcion')
 
+
     numero_jugado = str(numero)
 
 
