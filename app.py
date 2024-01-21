@@ -1,7 +1,9 @@
 from flask import Flask, url_for, request, render_template
 from flask import url_for
 from scrap import obtener_quiniela
-from config import urls
+from config import urls, fecha_valida
+from datetime import datetime
+
 
 app = Flask("App Quiniela")
 
@@ -13,7 +15,9 @@ def index():
 def mostrar_resultado(id_quiniela):
     resultados = obtener_quiniela(urls.get(id_quiniela))
     quiniela = {
-        id_quiniela : resultados
+        'resultados' : resultados,
+        'nombre': id_quiniela,
+        'fecha' : fecha_valida.strftime('%d/%m/%Y')
     }
     return render_template('index_resultados.html', quiniela = quiniela)
 

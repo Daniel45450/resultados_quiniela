@@ -1,2 +1,27 @@
 
-{{quiniela}}
+{% include 'menu.html' %}
+
+<div class="contenedor">
+    <h1>Quiniela de {{ quiniela.get('nombre') }} del dia {{ quiniela.get('fecha') }} </h1>
+    <div class="tablas">
+        {% for resultado in quiniela.get('resultados') %}
+            <table>
+                {% for horario, valores in resultado.items() %}
+                    <thead>
+                        <tr>
+                            <th>{{ horario }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for valor in valores %}
+                            <tr>
+                                <td> {{ loop.index }}</td>
+                                <td> {{ valor }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                {% endfor %}
+            </table>
+        {% endfor %}
+    </div>
+</div>

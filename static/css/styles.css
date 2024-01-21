@@ -154,3 +154,95 @@ body {
     flex-direction: column;
     background-color: var(--verde-claro);
 }
+
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las celdas del encabezado */
+th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* Estilo para las celdas de datos */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para las filas al pasar el ratón por encima */
+tr:hover {
+    background-color: #e5e5e5;
+}
+
+
+.tablas {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+}
+
+@media (max-width: 900px) {
+    .tablas {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .tablas {
+       display: block;
+    }
+}
+
+.menu {
+    display: block;
+    background-color: var(--gris-oscuro);
+    padding: 1rem;
+}
+
+.menu_elementos {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 400px) {
+    .menu_elementos {
+       display: block;
+       width: 100%;
+    }
+}
+
+.menu_elemento {
+    list-style-type: none;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+.menu_elemento:hover {
+    background-color: var(--gris);
+    cursor: pointer;
+}
+
+.menu_elemento a {
+    text-decoration: none;
+}
