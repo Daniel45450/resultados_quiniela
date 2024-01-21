@@ -1,3 +1,10 @@
+:root {
+    --gris: #D9D9D9;
+    --marron-claro: #b3724d;
+    --gris-oscuro: #cabfbf;
+    --verde-claro: #96e098;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -112,15 +119,15 @@ body {
 }
 
 .quiniela {
-    background-color: #D9D9D9;
-    border: 1px solid #cabfbf;
+    background-color: var(--gris);
+    border: 1px solid var(--gris-oscuro);
     border-radius: 1rem;
     margin: 2rem;
     padding: 1rem;
 }
 
 .quiniela_titulo {
-    background-color: #b3724d;
+    background-color: var(--marron-claro);
     text-transform: capitalize;
     padding: 1rem;
 }
@@ -145,5 +152,5 @@ body {
 .premios {
     display: flex;
     flex-direction: column;
-    background-color: #96e098;
+    background-color: var(--verde-claro);
 }

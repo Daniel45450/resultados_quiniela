@@ -9,6 +9,14 @@ app = Flask("App Quiniela")
 def index():
     return render_template('index.html')
 
+@app.route('/quiniela/<id_quiniela>')
+def mostrar_resultado(id_quiniela):
+    resultados = obtener_quiniela(urls.get(id_quiniela))
+    quiniela = {
+        id_quiniela : resultados
+    }
+    return render_template('index_resultados.html', quiniela = quiniela)
+
 @app.route('/revisar_jugada', methods=['POST'])
 def revisar_jugada():
 
