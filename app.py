@@ -5,7 +5,7 @@ from config import urls, fecha_valida
 from datetime import datetime
 
 
-app = Flask("App Quiniela")
+app = Flask(__name__)
 
 @app.route('/')
 def index():
