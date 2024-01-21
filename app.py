@@ -70,3 +70,5 @@ def get_cadenas(palabra):
     return cadenas 
 
 
+if __name__ == "__main__":
+  app.run(debug=True)
